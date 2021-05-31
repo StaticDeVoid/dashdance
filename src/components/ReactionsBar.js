@@ -1,5 +1,6 @@
 import { faComment } from "@fortawesome/free-regular-svg-icons/faComment";
 import { faHeart } from "@fortawesome/free-regular-svg-icons/faHeart";
+import { faRetweet } from "@fortawesome/free-solid-svg-icons";
 import { faComment as commentSolid } from "@fortawesome/free-solid-svg-icons/faComment";
 import { faHeart as heartSolid } from "@fortawesome/free-solid-svg-icons/faHeart";
 import { faReply } from "@fortawesome/free-solid-svg-icons/faReply";
@@ -31,9 +32,9 @@ export default function ReactionsBar({ post }) {
           id="comment-dropdown"
         >
           {post.retweeted ? (
-            <FontAwesomeIcon icon={commentSolid} className="text-success" />
+            <FontAwesomeIcon icon={faRetweet} className="text-success" />
           ) : (
-            <FontAwesomeIcon icon={faComment} />
+            <FontAwesomeIcon icon={faRetweet} className="text-muted" />
           )}
           <small className="m-1">{post.retweet_count}</small>
         </Dropdown.Toggle>
